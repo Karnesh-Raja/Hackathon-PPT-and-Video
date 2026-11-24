@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090909" />
+  <meta name="description" content="Explore Mystic Summit Hackathon teams, team members, departments, presentations and project videos." />
+  <title>Mystic Summit 2026 | Team Showcase</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090909;
+      --panel: rgba(24, 22, 17, .86);
+      --panel-2: rgba(34, 29, 19, .78);
+      --line: rgba(222, 184, 85, .22);
+      --gold: #e0bd65;
+      --gold-bright: #ffe8a5;
+      --text: #f8f3e6;
+      --muted: #bdb49c;
+      --soft: #8f866f;
+      --green: #b7dfb6;
+      --shadow: 0 24px 70px rgba(0,0,0,.3);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; min-height: 100vh; overflow-x: hidden;
+      color: var(--text);
+      background: radial-gradient(ellipse at 50% -15%, rgba(166,123,32,.16), transparent 42rem), var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; }
+    button, input, select { font: inherit; }
+    .ambient { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: -1; }
+    .ambient::before, .ambient::after { content: ""; position: absolute; border-radius: 50%; filter: blur(70px); opacity: .42; }
+    .ambient::before { width: 36rem; height: 36rem; top: -19rem; left: -12rem; background: rgba(181,133,36,.23); animation: driftA 24s ease-in-out infinite alternate; }
+    .ambient::after { width: 34rem; height: 34rem; right: -16rem; top: 28%; background: rgba(117,82,24,.18); animation: driftB 28s ease-in-out infinite alternate; }
+    .starfield { position: absolute; inset: 0; opacity: .24; background-image: radial-gradient(1px 1px at 20px 30px,#f6e3ae 60%,transparent), radial-gradient(1px 1px at 110px 90px,#d8b968 60%,transparent), radial-gradient(1.5px 1.5px at 190px 40px,#fff0c3 60%,transparent); background-size: 230px 160px; animation: stars 48s linear infinite; }
+    @keyframes driftA { to { transform: translate(90px,70px) scale(1.12); } }
+    @keyframes driftB { to { transform: translate(-70px,-45px) scale(.9); } }
+    @keyframes stars { to { background-position: 230px 160px; } }
+    .wrap { width: min(1240px, calc(100% - 40px)); margin: 0 auto; padding: 30px 0 58px; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:18px; padding: 14px 18px; border:1px solid var(--line); border-radius:18px; background:rgba(14,14,12,.7); backdrop-filter:blur(14px); }
+    .identity { min-width:0; }
+    .college { margin:0; color:#f5e9c8; font-family:Georgia,serif; font-size:clamp(14px,2.1vw,19px); font-weight:700; letter-spacing:.025em; }
+    .department { margin:5px 0 0; color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .live { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid var(--line); border-radius:999px; color:var(--muted); background:rgba(255,255,255,.025); font-size:12px; white-space:nowrap; }
+    .live-dot { width:7px; height:7px; border-radius:50%; background:#d7bd74; box-shadow:0 0 12px #d7bd74; }
+    .hero { position:relative; padding:62px 0 36px; max-width:900px; }
+    .eyebrow { margin:0 0 13px; color:var(--gold-bright); font-size:11px; font-weight:800; letter-spacing:.22em; text-transform:uppercase; }
+    .hero h1 { margin:0; font-family:Georgia,"Times New Roman",serif; font-size:clamp(42px,8vw,86px); line-height:.98; letter-spacing:-.045em; text-transform:uppercase; color:#f4e4b6; text-shadow:0 5px 30px rgba(210,168,68,.18); }
+    .hero h1 span { color:transparent; background:linear-gradient(105deg,#b98c31,#fff0bd 35%,#d7ae54 66%,#fff1c7); background-clip:text; -webkit-background-clip:text; }
+    .rule { width:86px; height:3px; margin:22px 0 17px; border-radius:3px; background:linear-gradient(90deg,#9e7425,#f6dc92); box-shadow:0 0 16px rgba(232,195,99,.38); }
+    .intro { max-width:660px; margin:0; color:var(--muted); font-size:15px; line-height:1.8; }
+    .stats { display:flex; flex-wrap:wrap; gap:10px; margin-top:25px; }
+    .stat { min-width:135px; padding:13px 16px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.025); }
+    .stat strong { display:block; color:var(--gold-bright); font-size:23px; line-height:1.1; }
+    .stat span { display:block; margin-top:5px; color:var(--muted); font-size:11px; letter-spacing:.06em; text-transform:uppercase; }
+    .toolbar { display:grid; grid-template-columns:minmax(220px,1fr) minmax(190px,250px) auto; gap:12px; align-items:center; margin:20px 0 15px; }
+    .search-box { position:relative; }
+    .search-symbol { position:absolute; top:50%; left:15px; transform:translateY(-50%); color:var(--gold); pointer-events:none; font-size:18px; }
+    #search, #departmentFilter { width:100%; min-height:48px; border:1px solid var(--line); border-radius:13px; outline:none; color:var(--text); background:rgba(19,18,15,.9); }
+    #search { padding:12px 15px 12px 43px; }
+    #departmentFilter { padding:12px 14px; }
+    #search:focus, #departmentFilter:focus { border-color:rgba(241,207,126,.72); box-shadow:0 0 0 3px rgba(224,189,101,.1); }
+    #departmentFilter option { background:#16140f; }
+    .refresh { min-height:48px; padding:11px 15px; border:1px solid rgba(224,189,101,.34); border-radius:13px; color:#1b160b; background:linear-gradient(110deg,#b98c31,#f8e7a8); font-size:12px; font-weight:850; cursor:pointer; transition:transform .2s ease, box-shadow .2s ease; white-space:nowrap; }
+    .refresh:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(211,168,72,.2); }
+    .summary-line { display:flex; justify-content:space-between; gap:12px; margin:10px 1px 16px; color:var(--muted); font-size:12px; }
+    #visibleCount { color:var(--text); font-weight:800; }
+    #updateStatus { text-align:right; }
+    .team-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; align-items:start; }
+    .team-card { min-width:0; border:1px solid var(--line); border-radius:17px; background:linear-gradient(145deg,rgba(34,30,21,.94),rgba(16,16,14,.93)); box-shadow:0 9px 28px rgba(0,0,0,.16); overflow:hidden; transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease; }
+    .team-card:hover { transform:translateY(-3px); border-color:rgba(240,211,142,.48); box-shadow:0 15px 35px rgba(0,0,0,.25),0 0 24px rgba(208,164,68,.07); }
+    .team-card[open] { border-color:rgba(232,199,116,.52); background:linear-gradient(145deg,rgba(48,39,22,.95),rgba(18,17,14,.97)); }
+    .team-card summary { display:flex; align-items:flex-start; gap:13px; padding:18px; cursor:pointer; list-style:none; }
+    .team-card summary::-webkit-details-marker { display:none; }
+    .number { display:grid; flex:0 0 39px; width:39px; height:39px; place-items:center; border:1px solid rgba(224,189,101,.26); border-radius:12px; color:var(--gold-bright); background:rgba(224,189,101,.09); font-size:12px; font-weight:850; }
+    .team-heading { min-width:0; flex:1; }
+    .team-name { display:block; overflow-wrap:anywhere; color:var(--text); font-size:16px; line-height:1.3; font-weight:800; letter-spacing:-.02em; }
+    .team-problem { display:block; margin-top:5px; color:var(--gold); font-size:11px; line-height:1.4; font-weight:700; }
+    .team-dept { margin:10px 0 0; color:var(--muted); font-size:11px; line-height:1.55; }
+    .team-meta { display:flex; align-items:center; flex-wrap:wrap; gap:7px; margin-top:10px; }
+    .mini-tag { padding:5px 8px; border:1px solid rgba(224,189,101,.17); border-radius:999px; color:#ded1ad; background:rgba(224,189,101,.055); font-size:10px; }
+    .chevron { margin:7px 0 0 2px; color:var(--gold); font-size:17px; transition:transform .2s ease; }
+    .team-card[open] .chevron { transform:rotate(180deg); }
+    .team-body { padding:0 18px 18px; border-top:1px solid rgba(224,189,101,.12); }
+    .leader-box { margin:15px 0 13px; padding:11px 12px; border:1px solid rgba(224,189,101,.18); border-radius:12px; background:rgba(224,189,101,.055); }
+    .label { display:block; margin-bottom:4px; color:var(--soft); font-size:9px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    .leader-name { color:var(--gold-bright); font-size:13px; font-weight:750; }
+    .members-title { display:flex; align-items:center; justify-content:space-between; gap:8px; margin:15px 0 9px; color:var(--text); font-size:12px; font-weight:800; }
+    .member-list { display:grid; grid-template-columns:1fr 1fr; gap:7px; margin:0; padding:0; list-style:none; }
+    .member { min-width:0; display:flex; align-items:flex-start; gap:7px; padding:8px 9px; border:1px solid rgba(255,255,255,.055); border-radius:9px; color:#ded8c8; background:rgba(255,255,255,.025); font-size:10px; line-height:1.35; }
+    .member .bullet { flex:0 0 auto; color:#a98a45; }
+    .member.is-leader { border-color:rgba(224,189,101,.25); color:#fff0c7; }
+    .member .leader-mark { margin-left:auto; color:var(--gold); font-size:8px; font-weight:850; letter-spacing:.06em; }
+    .resources { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+    .resource-link, .resource-missing { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:36px; padding:8px 11px; border-radius:10px; font-size:11px; font-weight:800; text-decoration:none; }
+    .resource-link { color:#211a0d; background:linear-gradient(110deg,#c49a42,#f6e4a9); box-shadow:inset 0 1px rgba(255,255,255,.45); transition:transform .18s ease,box-shadow .18s ease; }
+    .resource-link:hover { transform:translateY(-2px); box-shadow:0 7px 17px rgba(224,189,101,.18); }
+    .resource-missing { border:1px dashed rgba(224,189,101,.2); color:var(--soft); background:rgba(255,255,255,.02); font-weight:600; }
+    .link-note { margin:10px 0 0; color:var(--soft); font-size:10px; line-height:1.6; }
+    .state-panel { grid-column:1/-1; padding:24px 18px; border:1px dashed var(--line); border-radius:16px; color:var(--muted); background:rgba(255,255,255,.02); text-align:center; font-size:13px; line-height:1.7; }
+    .state-panel strong { display:block; margin-bottom:4px; color:var(--text); font-size:15px; }
+    .unmatched-wrap { margin-top:28px; }
+    .unmatched-wrap[hidden] { display:none; }
+    .unmatched-title { margin:0 0 8px; color:var(--gold-bright); font-family:Georgia,serif; font-size:20px; }
+    .unmatched-intro { margin:0 0 12px; color:var(--muted); font-size:12px; line-height:1.7; }
+    .unmatched-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    .unmatched-item { padding:13px; border:1px solid var(--line); border-radius:13px; background:rgba(255,255,255,.025); }
+    .unmatched-name { margin:0 0 8px; color:var(--text); font-size:12px; font-weight:800; }
+    .footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-top:45px; padding-top:18px; border-top:1px solid var(--line); color:var(--soft); font-size:11px; line-height:1.6; }
+    .mascot { position:fixed; right:17px; bottom:18px; z-index:5; width:48px; height:46px; display:grid; place-items:center; border:1px solid rgba(255,235,174,.65); border-radius:48% 48% 43% 43%; background:radial-gradient(circle at 35% 22%,#fff0bf,#dfb84f 45%,#8b6118 100%); box-shadow:0 0 20px rgba(224,189,101,.3),inset 0 2px 5px rgba(255,255,255,.45); animation:mascotHop 3.5s ease-in-out infinite; cursor:pointer; }
+    .mascot::before,.mascot::after { content:""; position:absolute; top:-5px; width:9px; height:11px; border-radius:80% 80% 20% 20%; background:linear-gradient(145deg,#f1d37c,#906118); }
+    .mascot::before { left:5px; transform:rotate(-22deg); } .mascot::after { right:5px; transform:rotate(22deg); }
+    .eyes { display:flex; gap:8px; margin-top:4px; } .eyes i { width:5px; height:7px; border-radius:50%; background:#241a08; }
+    @keyframes mascotHop { 0%,82%,100% { transform:translateY(0) rotate(0); } 88% { transform:translateY(-10px) rotate(-5deg); } 94% { transform:translateY(0) rotate(5deg); } }
+    @media (max-width:1000px) { .team-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width:700px) { .toolbar { grid-template-columns:1fr 1fr; } .search-box { grid-column:1/-1; } .refresh { width:100%; } .hero { padding-top:46px; } }
+    @media (max-width:560px) { .wrap { width:calc(100% - 26px); padding-top:13px; } .topbar { padding:12px; } .live { padding:7px 9px; font-size:10px; } .team-grid { grid-template-columns:1fr; } .member-list { grid-template-columns:1fr 1fr; } .unmatched-list { grid-template-columns:1fr; } .summary-line { font-size:11px; } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; animation:none !important; transition:none !important; } }
+  </style>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><div class="starfield"></div></div>
+  <main class="wrap">
+    <header class="topbar">
+      <div class="identity">
+        <p class="college">SRM Valliammai Engineering College</p>
+        <p class="department">Department of English</p>
+      </div>
+      <div class="live"><span class="live-dot"></span> Team showcase</div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Ideas made visible · People behind the projects</p>
+      <h1><span>Mystic Summit</span><br>Hackathon 2026</h1>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="intro">Meet the teams, discover the people behind each idea, and explore their presentations and project videos. Select a team card to view its complete member list and submission links.</p>
+      <div class="stats" aria-label="Showcase statistics">
+        <div class="stat"><strong id="totalTeams">—</strong><span>Registered teams</span></div>
+        <div class="stat"><strong id="totalStudents">—</strong><span>Team members</span></div>
+        <div class="stat"><strong id="submittedCount">—</strong><span>Teams with submissions</span></div>
+      </div>
+    </section>
+
+    <section aria-label="Team directory">
+      <div class="toolbar">
+        <label class="search-box">
+          <span class="search-symbol" aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="Search team, student, leader or problem ID…" autocomplete="off">
+        </label>
+        <select id="departmentFilter" aria-label="Filter by department">
+          <option value="">All departments</option>
+        </select>
+        <button class="refresh" id="refreshButton" type="button">↻ &nbsp; Refresh links</button>
+      </div>
+      <div class="summary-line">
+        <span>Showing <strong id="visibleCount">0</strong> teams</span>
+        <span id="updateStatus">Loading team directory…</span>
+      </div>
+      <div id="teamGrid" class="team-grid" aria-live="polite">
+        <div class="state-panel"><strong>Loading the teams</strong>Preparing the Mystic Summit directory…</div>
+      </div>
+
+      <section class="unmatched-wrap" id="unmatchedWrap" hidden>
+        <h2 class="unmatched-title">Submissions needing a team match</h2>
+        <p class="unmatched-intro" id="unmatchedIntro">These submissions could not be safely attached to a team using the leader name provided. Check the leader spelling or update the team directory.</p>
+        <div class="unmatched-list" id="unmatchedList"></div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <span>Mystic Summit Hackathon 2026 · Department of English</span>
+      <span>Team directory is included in this site. PPT/video links refresh from the published submission sheet.</span>
+    </footer>
+  </main>
+
+  <button class="mascot" type="button" aria-label="A little mascot — click for a hop" title="Click me!"><span class="eyes"><i></i><i></i></span></button>
+
+  <script>
+    // Existing published Google Sheets CSV URL from the previous showcase website.
+    // Submission labels contain the team name followed by a dash and the leader name.
+    // Matching uses that leader suffix, including for the five Tech Titans teams.
+    const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRpV1lTjxxg_WVpjZsJpnCPaP0b66Y3OBexrmDlzNpI5T0vdWOBy-phoH_4pHeGvYsIUjisG0YLSw0s/pub?gid=778663479&single=true&output=csv";
+    const REFRESH_EVERY_MS = 60000;
+
+    const grid = document.getElementById("teamGrid");
+    const searchInput = document.getElementById("search");
+    const departmentFilter = document.getElementById("departmentFilter");
+    const refreshButton = document.getElementById("refreshButton");
+    const updateStatus = document.getElementById("updateStatus");
+    const unmatchedWrap = document.getElementById("unmatchedWrap");
+    const unmatchedList = document.getElementById("unmatchedList");
+    let teams = [];
+    let submissions = [];
+    let busy = false;
+
+    const normalise = value => String(value ?? "").toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "");
+    const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+    const safeLink = value => {
+      const raw = String(value ?? "").trim();
+      if (!raw) return "";
+      try { const parsed = new URL(raw); return ["https:","http:"].includes(parsed.protocol) ? parsed.href : ""; }
+      catch { return ""; }
+    };
+
+    function parseCSV(text) {
+      const rows = []; let row = []; let cell = ""; let quoted = false;
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        if (ch === '"') {
+          if (quoted && text[i + 1] === '"') { cell += '"'; i++; }
+          else quoted = !quoted;
+        } else if (ch === "," && !quoted) { row.push(cell); cell = ""; }
+        else if ((ch === "\n" || ch === "\r") && !quoted) {
+          if (ch === "\r" && text[i + 1] === "\n") i++;
+          row.push(cell); if (row.some(v => String(v).trim())) rows.push(row);
+          row = []; cell = "";
+        } else cell += ch;
+      }
+      row.push(cell); if (row.some(v => String(v).trim())) rows.push(row);
+      return rows;
+    }
+
+    const headerKey = value => String(value ?? "").replace(/^\uFEFF/, "").trim().toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    function findColumns(rows) {
+      for (let r = 0; r < Math.min(rows.length, 12); r++) {
+        const heads = rows[r].map(headerKey);
+        const team = heads.findIndex(h => h === "team" || h.includes("team name") || (h.includes("team") && h.includes("name")) || h === "tam name" || h.includes("tam name"));
+        const ppt = heads.findIndex(h => h.includes("ppt") || h.includes("presentation"));
+        const video = heads.findIndex(h => h.includes("video"));
+        if (team >= 0 && ppt >= 0 && video >= 0) {
+          const problem = heads.findIndex(h => h.includes("problem") || h.includes("sih id") || h.includes("project code") || h.includes("problem id"));
+          return { headerRow: r, team, ppt, video, problem };
+        }
+      }
+      return null;
+    }
+
+    function splitSubmissionLabel(value) {
+      const label = String(value ?? "").trim();
+      // The submission form uses an en dash between the team name and leader.
+      // Also accept an em dash or a spaced hyphen for future submissions.
+      for (const separator of ["–", "—"]) {
+        const at = label.lastIndexOf(separator);
+        if (at >= 0) {
+          return {
+            teamName: label.slice(0, at).trim(),
+            leader: label.slice(at + separator.length).trim()
+          };
+        }
+      }
+      const hyphenAt = label.lastIndexOf(" - ");
+      if (hyphenAt >= 0) {
+        return {
+          teamName: label.slice(0, hyphenAt).trim(),
+          leader: label.slice(hyphenAt + 3).trim()
+        };
+      }
+      return { teamName: label, leader: "" };
+    }
+
+    function makeSubmissionRows(csv) {
+      const rows = parseCSV(csv);
+      const cols = findColumns(rows);
+      if (!cols) throw new Error("The published CSV must include Tam Name / Team Name, PPT link and Video link columns.");
+      const parsed = rows.slice(cols.headerRow + 1).map((r, i) => ({
+        rowId: i,
+        name: String(r[cols.team] ?? "").trim(),
+        ppt: safeLink(r[cols.ppt]),
+        video: safeLink(r[cols.video]),
+        problem: cols.problem >= 0 ? String(r[cols.problem] ?? "").trim() : ""
+      })).filter(s => s.name);
+
+      // The workbook contains a repeated Poornashri row with identical links.
+      // Collapse identical entries so one submission is shown only once.
+      const unique = new Map();
+      parsed.forEach(row => {
+        const key = [normalise(row.name), row.ppt, row.video].join("\u001f");
+        if (!unique.has(key)) unique.set(key, row);
+      });
+      return [...unique.values()];
+    }
+
+    function matchSubmissions() {
+      const used = new Set();
+      teams.forEach(team => {
+        team.ppt = safeLink(team.pptUrl);
+        team.video = safeLink(team.videoUrl);
+      });
+
+      // Match using the leader suffix to the right of the dash. This is the
+      // reliable key for teams whose visible names are repeated (Tech Titans)
+      // and also works for uniquely named teams in the submission workbook.
+      const teamsByLeader = new Map();
+      teams.forEach(team => {
+        const key = normalise(team.leader);
+        if (!key) return;
+        if (!teamsByLeader.has(key)) teamsByLeader.set(key, []);
+        teamsByLeader.get(key).push(team);
+      });
+      const rowsByLeader = new Map();
+      submissions.forEach(row => {
+        const leader = splitSubmissionLabel(row.name).leader;
+        const key = normalise(leader);
+        if (!key) return;
+        if (!rowsByLeader.has(key)) rowsByLeader.set(key, []);
+        rowsByLeader.get(key).push(row);
+      });
+
+      for (const [key, teamGroup] of teamsByLeader.entries()) {
+        const rows = rowsByLeader.get(key) || [];
+        // Only auto-assign when the leader identifies exactly one registered team.
+        if (teamGroup.length !== 1 || !rows.length) continue;
+        const team = teamGroup[0];
+        // The sheet is chronological: use the latest row when a leader submits
+        // an updated PPT/video. Mark earlier rows as superseded, not unmatched.
+        const latest = rows[rows.length - 1];
+        team.ppt = team.ppt || latest.ppt;
+        team.video = team.video || latest.video;
+        rows.forEach(row => used.add(row.rowId));
+      }
+
+      // If a future row contains only a team name (no leader suffix), match it
+      // only when that name is unique. A bare "Tech Titans" remains ambiguous.
+      submissions.filter(row => !used.has(row.rowId)).forEach(row => {
+        const parts = splitSubmissionLabel(row.name);
+        if (parts.leader) return;
+        let matches = teams.filter(team => normalise(team.name) === normalise(parts.teamName));
+        if (matches.length > 1 && row.problem) {
+          matches = matches.filter(team => {
+            const code = normalise(team.problemCode || "");
+            return code && normalise(row.problem).includes(code);
+          });
+        }
+        if (matches.length === 1) {
+          const team = matches[0];
+          team.ppt = team.ppt || row.ppt;
+          team.video = team.video || row.video;
+          used.add(row.rowId);
+        }
+      });
+
+      return submissions.filter(row => !used.has(row.rowId));
+    }
+
+    function action(label, url, symbol) {
+      if (!url) return `<span class="resource-missing">${symbol} ${label} not linked</span>`;
+      return `<a class="resource-link" href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${symbol} ${label}</a>`;
+    }
+
+    function renderTeam(team, index) {
+      const isTechTitan = normalise(team.name) === normalise("Tech Titans");
+      const cardTitle = isTechTitan ? `${team.name} — ${team.leader}` : team.name;
+      const problem = team.problemTitle ? `<span class="team-problem">${escapeHTML(team.problemTitle)}${team.problemCode ? ` · ${escapeHTML(team.problemCode)}` : ""}</span>` : "";
+      const members = (team.members || []).map(member => {
+        const leader = normalise(member) === normalise(team.leader);
+        return `<li class="member ${leader ? "is-leader" : ""}"><span class="bullet">◆</span><span>${escapeHTML(member)}</span>${leader ? `<span class="leader-mark">LEADER</span>` : ""}</li>`;
+      }).join("");
+      const note = (!team.ppt && !team.video)
+        ? (isTechTitan
+          ? `No PPT/video submission is currently listed for ${escapeHTML(team.leader)} in the submission sheet.`
+          : "PPT/video links have not been matched yet. Check the published submission sheet or add direct links in teams.json.")
+        : "Links open in a new tab. Ensure the Drive files are shared with viewers who need access.";
+      const leaderTag = isTechTitan
+        ? `<span class="mini-tag">Classified by leader</span>`
+        : `<span class="mini-tag">Leader: ${escapeHTML(team.leader)}</span>`;
+      return `<details class="team-card" data-id="${escapeHTML(team.id)}">
+        <summary>
+          <span class="number">${String(index + 1).padStart(2,"0")}</span>
+          <span class="team-heading">
+            <span class="team-name">${escapeHTML(cardTitle)}</span>
+            ${problem}
+            <span class="team-dept">${escapeHTML(team.department)}</span>
+            <span class="team-meta"><span class="mini-tag">${(team.members || []).length} members</span>${leaderTag}</span>
+          </span>
+          <span class="chevron" aria-hidden="true">⌄</span>
+        </summary>
+        <div class="team-body">
+          <div class="leader-box"><span class="label">Team leader</span><span class="leader-name">${escapeHTML(team.leader)}</span></div>
+          <div class="members-title"><span>Complete team roster</span><span class="mini-tag">${(team.members || []).length} students</span></div>
+          <ul class="member-list">${members}</ul>
+          <div class="resources">${action("View PPT", team.ppt, "↗")}${action("Watch video", team.video, "▶")}</div>
+          <p class="link-note">${note}</p>
+        </div>
+      </details>`;
+    }
+
+    function renderUnmatched(rows) {
+      const pending = rows.filter(row => row.ppt || row.video);
+      if (!pending.length) { unmatchedWrap.hidden = true; unmatchedList.innerHTML = ""; return; }
+      unmatchedWrap.hidden = false;
+      unmatchedList.innerHTML = pending.map(row => `<article class="unmatched-item">
+        <p class="unmatched-name">${escapeHTML(row.name)}${row.problem ? ` · ${escapeHTML(row.problem)}` : " · Problem/team match required"}</p>
+        <div class="resources">${action("View PPT", row.ppt, "↗")}${action("Watch video", row.video, "▶")}</div>
+      </article>`).join("");
+    }
+
+    function render() {
+      const query = normalise(searchInput.value);
+      const dept = departmentFilter.value;
+      const filtered = teams.filter(team => {
+        const haystack = normalise([team.name,team.department,team.leader,team.problemTitle,team.problemCode,...(team.members || [])].join(" "));
+        return (!query || haystack.includes(query)) && (!dept || team.department === dept);
+      });
+      document.getElementById("visibleCount").textContent = String(filtered.length);
+      document.getElementById("totalTeams").textContent = String(teams.length);
+      document.getElementById("totalStudents").textContent = String(teams.reduce((n,t) => n + (t.members || []).length,0));
+      const withLinks = teams.filter(t => t.ppt || t.video).length;
+      document.getElementById("submittedCount").textContent = String(withLinks);
+      grid.innerHTML = filtered.length ? filtered.map(team => renderTeam(team, teams.indexOf(team))).join("") : `<div class="state-panel"><strong>No matching teams</strong>Try another name, student, problem ID or department.</div>`;
+    }
+
+    function populateDepartments() {
+      const list = [...new Set(teams.map(t => t.department))].sort((a,b) => a.localeCompare(b));
+      departmentFilter.innerHTML = `<option value="">All departments</option>` + list.map(d => `<option value="${escapeHTML(d)}">${escapeHTML(d)}</option>`).join("");
+    }
+
+    async function loadDirectory() {
+      const response = await fetch("./teams.json", { cache: "no-store" });
+      if (!response.ok) throw new Error(`Could not load teams.json (${response.status}). Upload both index.html and teams.json to the repository root.`);
+      teams = await response.json();
+      populateDepartments();
+      render();
+    }
+
+    async function loadSubmissionLinks() {
+      if (busy) return;
+      busy = true;
+      refreshButton.disabled = true;
+      refreshButton.textContent = "↻  Refreshing…";
+      try {
+        const separator = SHEET_CSV_URL.includes("?") ? "&" : "?";
+        const response = await fetch(`${SHEET_CSV_URL}${separator}_=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) throw new Error(`Submission sheet returned ${response.status}`);
+        submissions = makeSubmissionRows(await response.text());
+        const unmatched = matchSubmissions();
+        render();
+        renderUnmatched(unmatched);
+        updateStatus.textContent = `Links checked ${new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})}`;
+      } catch (error) {
+        console.error(error);
+        updateStatus.textContent = "Team directory loaded · live links unavailable";
+        document.getElementById("unmatchedWrap").hidden = true;
+      } finally {
+        busy = false;
+        refreshButton.disabled = false;
+        refreshButton.textContent = "↻  Refresh links";
+      }
+    }
+
+    searchInput.addEventListener("input", render);
+    departmentFilter.addEventListener("change", render);
+    refreshButton.addEventListener("click", loadSubmissionLinks);
+    document.querySelector(".mascot").addEventListener("click", event => {
+      event.currentTarget.animate([{transform:"translateY(0)"},{transform:"translateY(-18px) rotate(-8deg)"},{transform:"translateY(0) rotate(5deg)"}], {duration:520,easing:"ease-out"});
+    });
+
+    (async () => {
+      try {
+        await loadDirectory();
+        await loadSubmissionLinks();
+        setInterval(() => { if (document.visibilityState === "visible") loadSubmissionLinks(); }, REFRESH_EVERY_MS);
+      } catch (error) {
+        console.error(error);
+        grid.innerHTML = `<div class="state-panel"><strong>Unable to load the team directory</strong>${escapeHTML(error.message)}</div>`;
+        updateStatus.textContent = "Directory data missing";
+      }
+    })();
+  </script>
+</body>
+</html>
