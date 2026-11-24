@@ -1,38 +1,1035 @@
 [
-  {"id":"syntaxians","name":"Syntaxians","department":"Information Technology","leader":"Yuvaraj V","members":["Yuvaraj V","Praveenraj A","Raghav S S","Surya R","Prasanna P","Nithyashree V"]},
-  {"id":"ace","name":"Ace","department":"Electronics and Instrumentation Engineering","leader":"Devadharshini K","members":["Devadharshini K","Dharshini K P","Alice Jebina A","Dhenu Shree U","Pathima Mary V","Niranjana J"]},
-  {"id":"tech-titans-disaster-management","name":"Tech Titans","department":"Information Technology","problemTitle":"Disaster Management","problemCode":"SIH26001","leader":"Sri Brindha G","members":["Sri Brindha G","Nivetha K V","Nivedha R K","Swetha M","Vishnuvardhan G","Yashini M","Rahul K"]},
-  {"id":"tech-titans-travel-tourism","name":"Tech Titans","department":"Artificial Intelligence and Data Science","problemTitle":"Travel & Tourism","problemCode":"SIH26204","leader":"Keerthishree D","members":["Keerthishree D","Kalaivani P","Jeevitha P","Dhanashree S","Harini Sri K","Kaanitha Sulthana F"]},
-  {"id":"syntax-squad","name":"SYNTAX SQUAD","department":"Computer Science and Engineering","leader":"John Maria Joel C","members":["John Maria Joel C","Abarnaa Devi M","Jey Aadithya K N","Hemanthraj U V","R K Diveswar","Brahat G B"]},
-  {"id":"circuitnerds","name":"Circuitnerds","department":"Electrical and Electronics Engineering","leader":"Gerubalakshmee S","members":["Gerubalakshmee S","Yogeshwaran P","Jiitesh S R","Purushotaman R E","Andrew Sam S","Kesavarthini S B"]},
-  {"id":"novatech","name":"Novatech","department":"Information Technology","leader":"Jagadeeshwaran P","members":["Jagadeeshwaran P","Ishan A","F Nafia Sithara","Hariharan V","Janani R","Girija T"]},
-  {"id":"nexora","name":"Nexora","department":"Electronics and Instrumentation Engineering","leader":"Vimalkumar B","members":["Vimalkumar B","Sandhiya A","Dharshini P","Subash M","Praveenkumar M","Jerick Sylwan J"]},
-  {"id":"bytespark","name":"Bytespark","department":"Information Technology","leader":"Pavithra H","members":["Pavithra H","Prabodhan A","Negha D","Srinivas R","Teacheswar D","K V Srinika"]},
-  {"id":"inevitables","name":"Inevitables","department":"Electrical and Electronics Engineering","leader":"Anuhasinee V","members":["Anuhasinee V","Sherine A","Sherina Shebel Eliza W","Santhosh Kumar S","Mokesh Priyan S","Ajay S"]},
-  {"id":"positive-force","name":"Positive Force","department":"Computer Science and Engineering","leader":"Siddharth Selvam Naidu","members":["Siddharth Selvam Naidu","Sathiyanarayanan S","Shai Sanjay G","Theerthan S","Vedha K","Sriram V K"]},
-  {"id":"syndicates","name":"Syndicates","department":"Information Technology","leader":"K Tamil Maghiznan","members":["K Tamil Maghiznan","Yogesh A","Navein A","Nithish Baskar S","Nandika B","Nethra B","Shanmugapriya R"]},
-  {"id":"codiqo","name":"Codiqo","department":"Artificial Intelligence and Data Science","leader":"Vignesh S","members":["Vignesh S","Sujitha R","Pugazhenthi H","Santhosh P","Marisamy M","Pritheesh M"]},
-  {"id":"cyber-syndicate","name":"Cyber Syndicate","department":"Cyber Security","leader":"Shanmuga Vel E","members":["Shanmuga Vel E","Tharunkumar S","Vijayamurugan V","Sobhika K K","Sanjiv A K","Somesh S"]},
-  {"id":"the-metaphors","name":"THE METAPHORS","department":"Electronics and Instrumentation Engineering","leader":"Nikkitha M","members":["Nikkitha M","Kavin S","Gokulnath M","Rajaraman B","Pramoth Sairam S","Keshavan K"]},
-  {"id":"glitchminds","name":"GLITCHMINDS","department":"Computer Science and Engineering","leader":"Narendran K","members":["Narendran K","Kishor S","A Muhammad Nawfal Riyaz","Lohendra T G","Lokeshwer V K","Keerthika M"]},
-  {"id":"skymark","name":"SKYMARK","department":"Agricultural Engineering & Civil Engineering / Artificial Intelligence and Data Science","leader":"Ashmitha Rangaprasad","members":["Ashmitha Rangaprasad","Kawenakar K","Flona Mariya J","J Sanjith Saran","Harish T C","Antony Roshan A"]},
-  {"id":"tech-titans-toys-games","name":"Tech Titans","department":"Agricultural Engineering & Civil Engineering","problemTitle":"Toys & Games","problemCode":"SIH26225","leader":"Madhumithaa G","members":["Madhumithaa G","Nithyasri V S","Kirthisha K","Hariharan G","Hubert Jaya Monish R","Karthi S"]},
-  {"id":"dead-coders-society","name":"Dead Coders Society","department":"Computer Science and Engineering","leader":"A Kohulan","members":["A Kohulan","Megarshith Pacha","Prawin Kumar K","Khaja Mohideen P","B Kiruthika","T Lakshitha Devi"]},
-  {"id":"vision-x","name":"Vision X","department":"Electrical and Electronics Engineering","leader":"Syed Sulaiman S I","members":["Syed Sulaiman S I","Saran Prasath R D","Nafees Ahamed M B","Vishwa S","Thejasri R","Poornisha R"]},
-  {"id":"bumblebee","name":"Bumblebee","department":"Computer Science and Engineering","leader":"Sai Santhosh R","members":["Sai Santhosh R","Sanjey A V","Rajarajeswari S","Sadhiga U P","Santhosh Hariharan G","Sathyaseelan R"]},
-  {"id":"tech-titans-smart-education","name":"Tech Titans","department":"Computer Science and Engineering","problemTitle":"Smart Education","problemCode":"SIH26043","leader":"Poornashri S","members":["Poornashri S","Kavitha S","Ragavi E","Lavanya G","Nethra S","Pavithra S"]},
-  {"id":"hexova","name":"Hexova","department":"Electronics and Communication Engineering","leader":"Vishali Daksha A","members":["Vishali Daksha A","Swarnavarshini D","Shyam Kumar T","Yuvaraj S","Vishali R G","Yogesh J"]},
-  {"id":"rapid-girl","name":"Rapid girl","department":"Computer Science and Engineering","leader":"Dharshini R","members":["Dharshini R","Divijasri S","Hasini R","Dharshini V","Charulakshmi R","Aishwarya V"]},
-  {"id":"zyntrix","name":"ZYNTRIX","department":"Electronics and Communication Engineering","leader":"Suryaprakash K","members":["Suryaprakash K","Yazhini S","Vaishnavi P","Shrinithi S S","Vasikiran P","Santhosh C"]},
-  {"id":"nova-syndicate","name":"Nova Syndicate","department":"Electronics and Communication Engineering","leader":"Jaswant G S","members":["Jaswant G S","Aksheetha J","Alfina A","Haridharshan S","Deepak Nivedhara J","Hari V"]},
-  {"id":"codez","name":"CodeZ","department":"Computer Science and Engineering","leader":"Shaswathi K","members":["Shaswathi K","Seetharaman R","Yogesh S","Sujinthiran R","Sai Gopish P S","Rubhashri V"]},
-  {"id":"the-inventors","name":"The inventors","department":"Electrical and Electronics Engineering","leader":"Yogesh Kumar M","members":["Yogesh Kumar M","Siva Yogesh C","Birsha A","Sakthivel S","Farhana Mariyam N","Umakarthiga V"]},
-  {"id":"the-mavericks","name":"The Mavericks","department":"Electronics and Communication Engineering","leader":"Sanjeni V","members":["Sanjeni V","Sreeja U","Sonalika A","Shalini D","Vikash R","Shyam Prasad T"]},
-  {"id":"litspark","name":"Litspark","department":"Electronics and Communication Engineering","leader":"Haashish P","members":["Haashish P","M Harish Kumaar","Akshaya Varunika S","Haritha G","Jedidiah Paulson S","Abdul Hakam","Guruji S"]},
-  {"id":"tech-titans-smart-vehicles","name":"TECH TITANS","department":"Artificial Intelligence and Data Science","problemTitle":"Smart Vehicles","problemCode":"SIH26168","leader":"Monesh V","members":["Monesh V","Nivas S","Vishnuram P","Rithish R","Vishalini R","Nivitha M"]},
-  {"id":"kairox","name":"Kairox","department":"Electronics and Communication Engineering","leader":"Vishali K","members":["Vishali K","Stania Shalin M P","Sharon Aphiah T S","Sri Bala Abirami A","Santhosh Krishnaa T","M Varunesh"]},
-  {"id":"biomed","name":"BIOMED","department":"Medical Electronics","leader":"Abinaya V S","members":["Abinaya V S","Bhuvaneshwari S","Devendran R","Srinivas A","Nithishkumar S","Mohana Vel K"]},
-  {"id":"bug-hunters","name":"Bug Hunters","department":"Artificial Intelligence and Data Science","leader":"Gokulnath J","members":["Gokulnath J","Jothika Shree S R","Haariya E","Hashini M","Hakshath K","Dharshini A"]},
-  {"id":"mystic-minds","name":"Mystic Minds","department":"Electronics and Instrumentation Engineering / Electronics and Communication Engineering","leader":"P Shruthi","members":["P Shruthi","Trishna S","Shalini D","Yathra M","Mohamed Jabarulla H","Boopathi M","Dharun Kumar S"]},
-  {"id":"prometheus","name":"Prometheus","department":"Artificial Intelligence and Data Science","leader":"C Karnesh Raja","members":["C Karnesh Raja","Karthikraja R","Diwagar S","P Bhavana","L Akshaya Shri","Dhashiya H"]}
+  {
+    "id": "syntaxians",
+    "name": "Syntaxians",
+    "department": "Information Technology",
+    "leader": "Yuvaraj V",
+    "members": [
+      "Yuvaraj V",
+      "Praveenraj A",
+      "Raghav S S",
+      "Surya R",
+      "Prasanna P",
+      "Nithyashree V"
+    ]
+  },
+  {
+    "id": "ace",
+    "name": "Ace",
+    "department": "Electronics and Instrumentation Engineering",
+    "leader": "Devadharshini K",
+    "members": [
+      "Devadharshini K",
+      "Dharshini K P",
+      "Alice Jebina A",
+      "Dhenu Shree U",
+      "Pathima Mary V",
+      "Niranjana J"
+    ]
+  },
+  {
+    "id": "tech-titans-disaster-management",
+    "name": "Tech Titans",
+    "department": "Information Technology",
+    "problemTitle": "Disaster Management",
+    "problemCode": "SIH26001",
+    "leader": "Sri Brindha G",
+    "members": [
+      "Sri Brindha G",
+      "Nivetha K V",
+      "Nivedha R K",
+      "Swetha M",
+      "Vishnuvardhan G",
+      "Yashini M",
+      "Rahul K"
+    ]
+  },
+  {
+    "id": "tech-titans-travel-tourism",
+    "name": "Tech Titans",
+    "department": "Artificial Intelligence and Data Science",
+    "problemTitle": "Travel & Tourism",
+    "problemCode": "SIH26204",
+    "leader": "Keerthishree D",
+    "members": [
+      "Keerthishree D",
+      "Kalaivani P",
+      "Jeevitha P",
+      "Dhanashree S",
+      "Harini Sri K",
+      "Kaanitha Sulthana F"
+    ]
+  },
+  {
+    "id": "syntax-squad",
+    "name": "SYNTAX SQUAD",
+    "department": "Computer Science and Engineering",
+    "leader": "John Maria Joel C",
+    "members": [
+      "John Maria Joel C",
+      "Abarnaa Devi M",
+      "Jey Aadithya K N",
+      "Hemanthraj U V",
+      "R K Diveswar",
+      "Brahat G B"
+    ]
+  },
+  {
+    "id": "circuitnerds",
+    "name": "Circuitnerds",
+    "department": "Electrical and Electronics Engineering",
+    "leader": "Gerubalakshmee S",
+    "members": [
+      "Gerubalakshmee S",
+      "Yogeshwaran P",
+      "Jiitesh S R",
+      "Purushotaman R E",
+      "Andrew Sam S",
+      "Kesavarthini S B"
+    ]
+  },
+  {
+    "id": "novatech",
+    "name": "Novatech",
+    "department": "Information Technology",
+    "leader": "Jagadeeshwaran P",
+    "members": [
+      "Jagadeeshwaran P",
+      "Ishan A",
+      "F Nafia Sithara",
+      "Hariharan V",
+      "Janani R",
+      "Girija T"
+    ]
+  },
+  {
+    "id": "nexora",
+    "name": "Nexora",
+    "department": "Electronics and Instrumentation Engineering",
+    "leader": "Vimalkumar B",
+    "members": [
+      "Vimalkumar B",
+      "Sandhiya A",
+      "Dharshini P",
+      "Subash M",
+      "Praveenkumar M",
+      "Jerick Sylwan J"
+    ]
+  },
+  {
+    "id": "bytespark",
+    "name": "Bytespark",
+    "department": "Information Technology",
+    "leader": "Pavithra H",
+    "members": [
+      "Pavithra H",
+      "Prabodhan A",
+      "Negha D",
+      "Srinivas R",
+      "Teacheswar D",
+      "K V Srinika"
+    ]
+  },
+  {
+    "id": "inevitables",
+    "name": "Inevitables",
+    "department": "Electrical and Electronics Engineering",
+    "leader": "Anuhasinee V",
+    "members": [
+      "Anuhasinee V",
+      "Sherine A",
+      "Sherina Shebel Eliza W",
+      "Santhosh Kumar S",
+      "Mokesh Priyan S",
+      "Ajay S"
+    ]
+  },
+  {
+    "id": "positive-force",
+    "name": "Positive Force",
+    "department": "Computer Science and Engineering",
+    "leader": "Siddharth Selvam Naidu",
+    "members": [
+      "Siddharth Selvam Naidu",
+      "Sathiyanarayanan S",
+      "Shai Sanjay G",
+      "Theerthan S",
+      "Vedha K",
+      "Sriram V K"
+    ]
+  },
+  {
+    "id": "syndicates",
+    "name": "Syndicates",
+    "department": "Information Technology",
+    "leader": "K Tamil Maghiznan",
+    "members": [
+      "K Tamil Maghiznan",
+      "Yogesh A",
+      "Navein A",
+      "Nithish Baskar S",
+      "Nandika B",
+      "Nethra B",
+      "Shanmugapriya R"
+    ]
+  },
+  {
+    "id": "codiqo",
+    "name": "Codiqo",
+    "department": "Artificial Intelligence and Data Science",
+    "leader": "Vignesh S",
+    "members": [
+      "Vignesh S",
+      "Sujitha R",
+      "Pugazhenthi H",
+      "Santhosh P",
+      "Marisamy M",
+      "Pritheesh M"
+    ]
+  },
+  {
+    "id": "cyber-syndicate",
+    "name": "Cyber Syndicate",
+    "department": "Cyber Security",
+    "leader": "Shanmuga Vel E",
+    "members": [
+      "Shanmuga Vel E",
+      "Tharunkumar S",
+      "Vijayamurugan V",
+      "Sobhika K K",
+      "Sanjiv A K",
+      "Somesh S"
+    ]
+  },
+  {
+    "id": "the-metaphors",
+    "name": "THE METAPHORS",
+    "department": "Electronics and Instrumentation Engineering",
+    "leader": "Nikkitha M",
+    "members": [
+      "Nikkitha M",
+      "Kavin S",
+      "Gokulnath M",
+      "Rajaraman B",
+      "Pramoth Sairam S",
+      "Keshavan K"
+    ]
+  },
+  {
+    "id": "glitchminds",
+    "name": "GLITCHMINDS",
+    "department": "Computer Science and Engineering",
+    "leader": "Narendran K",
+    "members": [
+      "Narendran K",
+      "Kishor S",
+      "A Muhammad Nawfal Riyaz",
+      "Lohendra T G",
+      "Lokeshwer V K",
+      "Keerthika M"
+    ]
+  },
+  {
+    "id": "skymark",
+    "name": "SKYMARK",
+    "department": "Agricultural Engineering & Civil Engineering / Artificial Intelligence and Data Science",
+    "leader": "Ashmitha Rangaprasad",
+    "members": [
+      "Ashmitha Rangaprasad",
+      "Kawenakar K",
+      "Flona Mariya J",
+      "J Sanjith Saran",
+      "Harish T C",
+      "Antony Roshan A"
+    ]
+  },
+  {
+    "id": "tech-titans-toys-games",
+    "name": "Tech Titans",
+    "department": "Agricultural Engineering & Civil Engineering",
+    "problemTitle": "Toys & Games",
+    "problemCode": "SIH26225",
+    "leader": "Madhumithaa G",
+    "members": [
+      "Madhumithaa G",
+      "Nithyasri V S",
+      "Kirthisha K",
+      "Hariharan G",
+      "Hubert Jaya Monish R",
+      "Karthi S"
+    ]
+  },
+  {
+    "id": "dead-coders-society",
+    "name": "Dead Coders Society",
+    "department": "Computer Science and Engineering",
+    "leader": "A Kohulan",
+    "members": [
+      "A Kohulan",
+      "Megarshith Pacha",
+      "Prawin Kumar K",
+      "Khaja Mohideen P",
+      "B Kiruthika",
+      "T Lakshitha Devi"
+    ]
+  },
+  {
+    "id": "vision-x",
+    "name": "Vision X",
+    "department": "Electrical and Electronics Engineering",
+    "leader": "Syed Sulaiman S I",
+    "members": [
+      "Syed Sulaiman S I",
+      "Saran Prasath R D",
+      "Nafees Ahamed M B",
+      "Vishwa S",
+      "Thejasri R",
+      "Poornisha R"
+    ]
+  },
+  {
+    "id": "bumblebee",
+    "name": "Bumblebee",
+    "department": "Computer Science and Engineering",
+    "leader": "Sai Santhosh R",
+    "members": [
+      "Sai Santhosh R",
+      "Sanjey A V",
+      "Rajarajeswari S",
+      "Sadhiga U P",
+      "Santhosh Hariharan G",
+      "Sathyaseelan R"
+    ]
+  },
+  {
+    "id": "tech-titans-smart-education",
+    "name": "Tech Titans",
+    "department": "Computer Science and Engineering",
+    "problemTitle": "Smart Education",
+    "problemCode": "SIH26043",
+    "leader": "Poornashri S",
+    "members": [
+      "Poornashri S",
+      "Kavitha S",
+      "Ragavi E",
+      "Lavanya G",
+      "Nethra S",
+      "Pavithra S"
+    ]
+  },
+  {
+    "id": "hexova",
+    "name": "Hexova",
+    "department": "Electronics and Communication Engineering",
+    "leader": "Vishali Daksha A",
+    "members": [
+      "Vishali Daksha A",
+      "Swarnavarshini D",
+      "Shyam Kumar T",
+      "Yuvaraj S",
+      "Vishali R G",
+      "Yogesh J"
+    ]
+  },
+  {
+    "id": "rapid-girl",
+    "name": "Rapid girl",
+    "department": "Computer Science and Engineering",
+    "leader": "Dharshini R",
+    "members": [
+      "Dharshini R",
+      "Divijasri S",
+      "Hasini R",
+      "Dharshini V",
+      "Charulakshmi R",
+      "Aishwarya V"
+    ]
+  },
+  {
+    "id": "zyntrix",
+    "name": "ZYNTRIX",
+    "department": "Electronics and Communication Engineering",
+    "leader": "Suryaprakash K",
+    "members": [
+      "Suryaprakash K",
+      "Yazhini S",
+      "Vaishnavi P",
+      "Shrinithi S S",
+      "Vasikiran P",
+      "Santhosh C"
+    ]
+  },
+  {
+    "id": "nova-syndicate",
+    "name": "Nova Syndicate",
+    "department": "Electronics and Communication Engineering",
+    "leader": "Jaswant G S",
+    "members": [
+      "Jaswant G S",
+      "Aksheetha J",
+      "Alfina A",
+      "Haridharshan S",
+      "Deepak Nivedhara J",
+      "Hari V"
+    ]
+  },
+  {
+    "id": "codez",
+    "name": "CodeZ",
+    "department": "Computer Science and Engineering",
+    "leader": "Shaswathi K",
+    "members": [
+      "Shaswathi K",
+      "Seetharaman R",
+      "Yogesh S",
+      "Sujinthiran R",
+      "Sai Gopish P S",
+      "Rubhashri V"
+    ]
+  },
+  {
+    "id": "the-inventors",
+    "name": "The inventors",
+    "department": "Electrical and Electronics Engineering",
+    "leader": "Yogesh Kumar M",
+    "members": [
+      "Yogesh Kumar M",
+      "Siva Yogesh C",
+      "Birsha A",
+      "Sakthivel S",
+      "Farhana Mariyam N",
+      "Umakarthiga V"
+    ]
+  },
+  {
+    "id": "the-mavericks",
+    "name": "The Mavericks",
+    "department": "Electronics and Communication Engineering",
+    "leader": "Sanjeni V",
+    "members": [
+      "Sanjeni V",
+      "Sreeja U",
+      "Sonalika A",
+      "Shalini D",
+      "Vikash R",
+      "Shyam Prasad T"
+    ]
+  },
+  {
+    "id": "litspark",
+    "name": "Litspark",
+    "department": "Electronics and Communication Engineering",
+    "leader": "Haashish P",
+    "members": [
+      "Haashish P",
+      "M Harish Kumaar",
+      "Akshaya Varunika S",
+      "Haritha G",
+      "Jedidiah Paulson S",
+      "Abdul Hakam",
+      "Guruji S"
+    ]
+  },
+  {
+    "id": "tech-titans-smart-vehicles",
+    "name": "TECH TITANS",
+    "department": "Artificial Intelligence and Data Science",
+    "problemTitle": "Smart Vehicles",
+    "problemCode": "SIH26168",
+    "leader": "Monesh V",
+    "members": [
+      "Monesh V",
+      "Nivas S",
+      "Vishnuram P",
+      "Rithish R",
+      "Vishalini R",
+      "Nivitha M"
+    ]
+  },
+  {
+    "id": "kairox",
+    "name": "Kairox",
+    "department": "Electronics and Communication Engineering",
+    "leader": "Vishali K",
+    "members": [
+      "Vishali K",
+      "Stania Shalin M P",
+      "Sharon Aphiah T S",
+      "Sri Bala Abirami A",
+      "Santhosh Krishnaa T",
+      "M Varunesh"
+    ]
+  },
+  {
+    "id": "biomed",
+    "name": "BIOMED",
+    "department": "Medical Electronics",
+    "leader": "Abinaya V S",
+    "members": [
+      "Abinaya V S",
+      "Bhuvaneshwari S",
+      "Devendran R",
+      "Srinivas A",
+      "Nithishkumar S",
+      "Mohana Vel K"
+    ]
+  },
+  {
+    "id": "bug-hunters",
+    "name": "Bug Hunters",
+    "department": "Artificial Intelligence and Data Science",
+    "leader": "Gokulnath J",
+    "members": [
+      "Gokulnath J",
+      "Jothika Shree S R",
+      "Haariya E",
+      "Hashini M",
+      "Hakshath K",
+      "Dharshini A"
+    ]
+  },
+  {
+    "id": "mystic-minds",
+    "name": "Mystic Minds",
+    "department": "Electronics and Instrumentation Engineering / Electronics and Communication Engineering",
+    "leader": "P Shruthi",
+    "members": [
+      "P Shruthi",
+      "Trishna S",
+      "Shalini D",
+      "Yathra M",
+      "Mohamed Jabarulla H",
+      "Boopathi M",
+      "Dharun Kumar S"
+    ]
+  },
+  {
+    "id": "prometheus",
+    "name": "Prometheus",
+    "department": "Artificial Intelligence and Data Science",
+    "leader": "C Karnesh Raja",
+    "members": [
+      "C Karnesh Raja",
+      "Karthikraja R",
+      "Diwagar S",
+      "P Bhavana",
+      "L Akshaya Shri",
+      "Dhashiya H"
+    ]
+  },
+  {
+    "id": "alpha-six",
+    "name": "ALPHA SIX",
+    "department": "Artificial Intelligence and Data Science",
+    "problemTitle": "AI-Powered Email Threat Detection, GeoLocation and Forensic Intelligence Platform",
+    "problemCode": "SIH26106",
+    "leader": "KARTHIK M",
+    "members": [
+      "KARTHIK M",
+      "JEFFREY CYRIL G",
+      "JAYASWETHA J",
+      "BHUVAN R",
+      "BALAVIKRANTH V",
+      "DINESH S"
+    ],
+    "memberDepartments": {
+      "KARTHIK M": "Artificial Intelligence and Data Science",
+      "JEFFREY CYRIL G": "Artificial Intelligence and Data Science",
+      "JAYASWETHA J": "Artificial Intelligence and Data Science",
+      "BHUVAN R": "Artificial Intelligence and Data Science",
+      "BALAVIKRANTH V": "Artificial Intelligence and Data Science",
+      "DINESH S": "Artificial Intelligence and Data Science"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://hackx1920-ship-it.github.io/Alpha-six/",
+    "videoUrl": "https://drive.google.com/file/d/11r_OP0Op5ao6PrL4c0FBXa32QhVkXooU/view?usp=drivesdk"
+  },
+  {
+    "id": "codevanta",
+    "name": "Codevanta",
+    "department": "Computer Science and Engineering / Information Technology",
+    "problemTitle": "AI-Driven Scheme Matching for Marginalized Entrepreneurs",
+    "problemCode": "SIH26092",
+    "leader": "SIVA DHARSINI N S",
+    "members": [
+      "SIVA DHARSINI N S",
+      "VISHAL S",
+      "YAHYA NAFEEZ A",
+      "VIJAYASHREE K",
+      "SUDARSHAN C S",
+      "HARSHITHA M"
+    ],
+    "memberDepartments": {
+      "SIVA DHARSINI N S": "Computer Science and Engineering",
+      "VISHAL S": "Computer Science and Engineering",
+      "YAHYA NAFEEZ A": "Computer Science and Engineering",
+      "VIJAYASHREE K": "Computer Science and Engineering",
+      "SUDARSHAN C S": "Computer Science and Engineering",
+      "HARSHITHA M": "Information Technology"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://sekarvishal-png.github.io/Nidhi-path-AI/",
+    "videoUrl": "https://drive.google.com/file/d/13c7vPHXnxZqPyZywd9IOgZK7kIws4pII/view?usp=drivesdk"
+  },
+  {
+    "id": "electronaut",
+    "name": "ELECTRONAUT",
+    "department": "Electrical and Electronics Engineering",
+    "problemTitle": "Student Innovation-Innovative ideas that help manage and generate renewable /sustainable sources more efficiently",
+    "problemCode": "SIH26200",
+    "leader": "LAKSHANA M",
+    "members": [
+      "LAKSHANA M",
+      "POOJA SHREE S",
+      "SUBALAKSHMI N",
+      "KESAV K",
+      "KISHORE K U",
+      "SHANMUGAPRIYAN R"
+    ],
+    "memberDepartments": {
+      "LAKSHANA M": "Electrical and Electronics Engineering",
+      "POOJA SHREE S": "Electrical and Electronics Engineering",
+      "SUBALAKSHMI N": "Electrical and Electronics Engineering",
+      "KESAV K": "Electrical and Electronics Engineering",
+      "KISHORE K U": "Electrical and Electronics Engineering",
+      "SHANMUGAPRIYAN R": "Electrical and Electronics Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://github.com/mlakshana/ELECTRONAUT-/blob/2d738712d599b0334f1c8505a9407e0a8399212c/Electronaut_WattWise_SIH_Idea.pptx",
+    "videoUrl": "https://drive.google.com/file/d/1ERk8vFQP1lN1AluQQvCnch0bpemxthCY/view?usp=drivesdk"
+  },
+  {
+    "id": "error-404",
+    "name": "Error 404",
+    "department": "Computer Science and Engineering",
+    "problemTitle": "Quantum-Inspired Fuel Consumption Prediction and Green Fleet Optimization",
+    "problemCode": "SIH26138",
+    "leader": "DINESHRAM R",
+    "members": [
+      "DINESHRAM R",
+      "AATHIRA B",
+      "DEEKSHITHAA A",
+      "JENILEA R",
+      "HARITHA K",
+      "AADITHYA H"
+    ],
+    "memberDepartments": {
+      "DINESHRAM R": "Computer Science and Engineering",
+      "AATHIRA B": "Computer Science and Engineering",
+      "DEEKSHITHAA A": "Computer Science and Engineering",
+      "JENILEA R": "Computer Science and Engineering",
+      "HARITHA K": "Computer Science and Engineering",
+      "AADITHYA H": "Computer Science and Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://github.com/Dineshram05/Quantum-Inspired-Fuel-Prediction-And-Green-Fleet-Optimisation.",
+    "videoUrl": "https://drive.google.com/drive/folders/1KCdsWZV0cGWx0sr0UZyrCWOul4Suh_dx"
+  },
+  {
+    "id": "error-404-gear-not-found",
+    "name": "Error 404 : Gear Not Found",
+    "department": "Mechanical Engineering",
+    "problemTitle": "Safe and Efficient Operation of Mine Vehicles in Fog and Low-Visibility Conditions in Open Cast Iron Ore Mines.",
+    "problemCode": "SIH26007",
+    "leader": "RITHICK SARVESH",
+    "members": [
+      "RITHICK SARVESH",
+      "PRAVEEN KUMAR P",
+      "KABILESH S",
+      "VISHVA G",
+      "SHARMILADEVI N",
+      "DANSHRI S"
+    ],
+    "memberDepartments": {
+      "RITHICK SARVESH": "Mechanical Engineering",
+      "PRAVEEN KUMAR P": "Mechanical Engineering",
+      "KABILESH S": "Mechanical Engineering",
+      "VISHVA G": "Mechanical Engineering",
+      "SHARMILADEVI N": "Mechanical Engineering",
+      "DANSHRI S": "Mechanical Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://github.com/RS0758/ERROR-404-Gear-Not-Found/blob/main/Project%20ORELERT%20MECH404.pdf",
+    "videoUrl": "https://drive.google.com/drive/folders/1tfy3FTgA9p5ZLBXHnX9IG6cML33kgX9p?usp=share_link"
+  },
+  {
+    "id": "flawless",
+    "name": "Flawless",
+    "department": "Electrical and Electronics Engineering",
+    "problemTitle": "AI-Based early warning and landslide Risk Monitoring System in NER",
+    "problemCode": "SIH26001",
+    "leader": "AATHIF ESSA M",
+    "members": [
+      "AATHIF ESSA M",
+      "YOGESHWARAN P",
+      "KAVIN S",
+      "INDUMATHI S",
+      "HARIHARAN S",
+      "TIANA P"
+    ],
+    "memberDepartments": {
+      "AATHIF ESSA M": "Electrical and Electronics Engineering",
+      "YOGESHWARAN P": "Electrical and Electronics Engineering",
+      "KAVIN S": "Electrical and Electronics Engineering",
+      "INDUMATHI S": "Electrical and Electronics Engineering",
+      "HARIHARAN S": "Electrical and Electronics Engineering",
+      "TIANA P": "Electrical and Electronics Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://docs.google.com/presentation/d/1bK_Z7hqVmURmhAz6MSfPZi_T2tB1U3G7/edit?usp=drive_link&ouid=109309740135307618440&rtpof=true&sd=true",
+    "videoUrl": "https://drive.google.com/file/d/16ctyYputYcOdlUklR21LFh66uoFFp_1J/view?usp=drivesdk"
+  },
+  {
+    "id": "genz-404",
+    "name": "Genz 404",
+    "department": "Information Technology / Electronics and Communication Engineering",
+    "problemTitle": "A digital platform to crowdsource societal challenges and facilitate collaborative problem solving through universities and industry partnerships",
+    "problemCode": "SIH26043",
+    "leader": "GOKUL G",
+    "members": [
+      "GOKUL G",
+      "HARIHARAN S",
+      "KISHORE BALAJI J",
+      "JONE GLADSON M",
+      "DIVYASRI K",
+      "LINGESH S"
+    ],
+    "memberDepartments": {
+      "GOKUL G": "Information Technology",
+      "HARIHARAN S": "Information Technology",
+      "KISHORE BALAJI J": "Information Technology",
+      "JONE GLADSON M": "Information Technology",
+      "DIVYASRI K": "Information Technology",
+      "LINGESH S": "Electronics and Communication Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://gokulxplore.github.io/Mystic-Summit-2026-Genz404/",
+    "videoUrl": "https://drive.google.com/file/d/1oVm2JA1dUoK_10jILG4DDVAsGKmgGYWA/view?usp=drivesdk"
+  },
+  {
+    "id": "hexacore",
+    "name": "HEXACORE",
+    "department": "Computer Science and Engineering",
+    "problemTitle": "Design and Develop a Smart Mobile Medical-Waste Collection and Segregation System",
+    "problemCode": "SIH26115",
+    "leader": "KISHORE V",
+    "members": [
+      "KISHORE V",
+      "KANISHKA M",
+      "P MADHUKRISHNA",
+      "KATHIKSHA V",
+      "KASI VISWANATHAN S S",
+      "RAGAV KRISHNA V"
+    ],
+    "memberDepartments": {
+      "KISHORE V": "Computer Science and Engineering",
+      "KANISHKA M": "Computer Science and Engineering",
+      "P MADHUKRISHNA": "Computer Science and Engineering",
+      "KATHIKSHA V": "Computer Science and Engineering",
+      "KASI VISWANATHAN S S": "Computer Science and Engineering",
+      "RAGAV KRISHNA V": "Computer Science and Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://github.com/kishorevijayakanth126/-.git",
+    "videoUrl": "https://drive.google.com/file/d/1xBobeH6a7Nf2diefX1jdZ3Djv-BCJk0d/view?usp=drivesdk"
+  },
+  {
+    "id": "infinix",
+    "name": "INFINIX",
+    "department": "Computer Science and Engineering",
+    "problemTitle": "Student Innovation-Ideas that can boost fitness activities and assist in keeping fit.",
+    "problemCode": "SIH26196",
+    "leader": "JEEVITHA U",
+    "members": [
+      "JEEVITHA U",
+      "HARSHINI N",
+      "ANUSRI A",
+      "HARINA K",
+      "GAYATHRI K",
+      "DIVYA M"
+    ],
+    "memberDepartments": {
+      "JEEVITHA U": "Computer Science and Engineering",
+      "HARSHINI N": "Computer Science and Engineering",
+      "ANUSRI A": "Computer Science and Engineering",
+      "HARINA K": "Computer Science and Engineering",
+      "GAYATHRI K": "Computer Science and Engineering",
+      "DIVYA M": "Computer Science and Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://github.com/jeevithavec/Infinix/tree/main",
+    "videoUrl": "https://drive.google.com/file/d/1tW9wT6H3axqAdjsS78ig6_ptT3YbEh9Z/view?usp=drivesdk"
+  },
+  {
+    "id": "lexinova",
+    "name": "LEXINOVA",
+    "department": "Agricultural Engineerings & Civil Engineering / Agricultural Engineering and Civil Engineering",
+    "problemTitle": "OceanEmbed - Satellite Embedding-Based Deep Learning Framework for Reconstruction of Subsurface Ocean Temperature from Surface Satellite Observations.",
+    "problemCode": "SIH26066",
+    "leader": "SAROJINI SAMINATHAN",
+    "members": [
+      "SAROJINI SAMINATHAN",
+      "SUBHASHREE A",
+      "JAINSRI K V",
+      "NAVEENKARTHI M",
+      "S K PRAJITH",
+      "HARI PRIYA K",
+      "A JEEVIGA"
+    ],
+    "memberDepartments": {
+      "SAROJINI SAMINATHAN": "Agricultural Engineerings & Civil Engineering",
+      "SUBHASHREE A": "Agricultural Engineerings & Civil Engineering",
+      "JAINSRI K V": "Agricultural Engineerings & Civil Engineering",
+      "NAVEENKARTHI M": "Agricultural Engineerings & Civil Engineering",
+      "S K PRAJITH": "Agricultural Engineerings & Civil Engineering",
+      "HARI PRIYA K": "Agricultural Engineerings & Civil Engineering",
+      "A JEEVIGA": "Agricultural Engineering and Civil Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://sarojinisaminathan.github.io/Mystic-Summit-Hackathon-Team-LEXINOVA-/",
+    "videoUrl": "https://drive.google.com/file/d/1zp9VK7UR3ajxJU4PQZM2rOwR2Ybt2Snu/view?usp=drivesdk"
+  },
+  {
+    "id": "linguistic-lynx",
+    "name": "Linguistic Lynx",
+    "department": "Computer Science and Engineering",
+    "problemTitle": "3D ULPIN Generation and vertical Property Mapping SYstem",
+    "problemCode": "SIH26011",
+    "leader": "GOKULAKANNAN S",
+    "members": [
+      "GOKULAKANNAN S",
+      "GOKUL K",
+      "GANESAN V",
+      "DHARSHINI S",
+      "DHANASRI K",
+      "JANANI D"
+    ],
+    "memberDepartments": {
+      "GOKULAKANNAN S": "Computer Science and Engineering",
+      "GOKUL K": "Computer Science and Engineering",
+      "GANESAN V": "Computer Science and Engineering",
+      "DHARSHINI S": "Computer Science and Engineering",
+      "DHANASRI K": "Computer Science and Engineering",
+      "JANANI D": "Computer Science and Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://github.com/dhanasrikalidoss07-jpg/3d-UPLIN-HACKATHON-PROJECT",
+    "videoUrl": "https://drive.google.com/file/d/1rJaQMSaSjSoAZCBgO9_kZEj2dI-MD2-4/view?usp=drivesdk"
+  },
+  {
+    "id": "nexora-1",
+    "name": "Nexora(1)",
+    "department": "Electronics and Communication Engineering",
+    "problemTitle": "Cooperative Gig Services Platform for Household & Community Services",
+    "problemCode": "SIH26089",
+    "leader": "SANTHOSH SUBRAMANIAN R",
+    "members": [
+      "SANTHOSH SUBRAMANIAN R",
+      "YASEER M",
+      "SWENTHAN S",
+      "SHASWATH S",
+      "VISHWATHULASI V",
+      "SHIVAANI T K"
+    ],
+    "memberDepartments": {
+      "SANTHOSH SUBRAMANIAN R": "Electronics and Communication Engineering",
+      "YASEER M": "Electronics and Communication Engineering",
+      "SWENTHAN S": "Electronics and Communication Engineering",
+      "SHASWATH S": "Electronics and Communication Engineering",
+      "VISHWATHULASI V": "Electronics and Communication Engineering",
+      "SHIVAANI T K": "Electronics and Communication Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://github.com/santhoshsubramanian174/NEXORA-1-.git",
+    "videoUrl": "https://drive.google.com/file/d/1yqfPBgGDnDg_ts_AmkC2h8mRfnlHx2_w/view?usp=drive_link"
+  },
+  {
+    "id": "nexora-shakthi-shree",
+    "name": "Nexora",
+    "department": "Computer Science and Engineering",
+    "problemTitle": "Air Pollution-Weather Coupled Forecasting System (Delhi NCR Focus)",
+    "problemCode": "SIH26082",
+    "leader": "SHAKTHI SHREE",
+    "members": [
+      "SHAKTHI SHREE",
+      "M S RISITHA",
+      "SHUBRINA K",
+      "SONA SRI N",
+      "SRI DIVYA N",
+      "RITHIKA V"
+    ],
+    "memberDepartments": {
+      "SHAKTHI SHREE": "Computer Science and Engineering",
+      "M S RISITHA": "Computer Science and Engineering",
+      "SHUBRINA K": "Computer Science and Engineering",
+      "SONA SRI N": "Computer Science and Engineering",
+      "SRI DIVYA N": "Computer Science and Engineering",
+      "RITHIKA V": "Computer Science and Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://github.com/shakthishreeprakash6-cmd/NEXORA-SIH26082.git",
+    "videoUrl": "https://drive.google.com/file/d/1cYKzlVBEV33cvAuwQgefw4gANTsRpiJB/view?usp=drive_link"
+  },
+  {
+    "id": "quarix",
+    "name": "QUARIX",
+    "department": "Electronics and Instrumentation Engineering",
+    "problemTitle": "Flash Flood Prediction System for Hilly Regions using Multi-Source Data Theme",
+    "problemCode": "SIH26192",
+    "leader": "ANISH PRASANA P",
+    "members": [
+      "ANISH PRASANA P",
+      "MAHALAKSHMI N",
+      "THAMIZHARASAN A",
+      "JAYAKUMAR S",
+      "MANISHA A",
+      "YAZHINI"
+    ],
+    "memberDepartments": {
+      "ANISH PRASANA P": "Electronics and Instrumentation Engineering",
+      "MAHALAKSHMI N": "Electronics and Instrumentation Engineering",
+      "THAMIZHARASAN A": "Electronics and Instrumentation Engineering",
+      "JAYAKUMAR S": "Electronics and Instrumentation Engineering",
+      "MANISHA A": "Electronics and Instrumentation Engineering",
+      "YAZHINI": "Electronics and Instrumentation Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://github.com/Anishprasana18/flash-flood-early-warning-system.git",
+    "videoUrl": "https://drive.google.com/file/d/1gm6UGnEcznNmw5j0wPivsgLQIPg1AIhE/view?usp=drivesdk"
+  },
+  {
+    "id": "shesync",
+    "name": "SheSync",
+    "department": "Cyber Security",
+    "problemTitle": "Design and Development of an Integrated Secure Data Erasure and Advanced File Recovery Tool for Digital Forensics and Data Sanitization",
+    "problemCode": "SIH26149",
+    "leader": "SASWITHA S",
+    "members": [
+      "SASWITHA S",
+      "ASVITHA B",
+      "M KAUSHIKA",
+      "THAMIZHAZHAGI T",
+      "DHARSHINI G",
+      "SRIVARSHINI P"
+    ],
+    "memberDepartments": {
+      "SASWITHA S": "Cyber Security",
+      "ASVITHA B": "Cyber Security",
+      "M KAUSHIKA": "Cyber Security",
+      "THAMIZHAZHAGI T": "Cyber Security",
+      "DHARSHINI G": "Cyber Security",
+      "SRIVARSHINI P": "Cyber Security"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://github.com/saswitha6666/SheSync.git",
+    "videoUrl": "https://drive.google.com/file/d/1aHpTpW9M-X6EubKPTy3rHpGtp2pzx0Lp/view?usp=sharing"
+  },
+  {
+    "id": "smart-worker",
+    "name": "Smart worker",
+    "department": "Information Technology",
+    "problemTitle": "AI-Powered Continuous Cyber Risk Quantification and Investment Optimization Platform",
+    "problemCode": "SIH26105",
+    "leader": "LOKESH MURUGAN L",
+    "members": [
+      "LOKESH MURUGAN L",
+      "MOHANA SHREE S",
+      "MANTHRA S",
+      "BHAVANI SHREE V",
+      "DHAKSHAN B",
+      "AKASH V"
+    ],
+    "memberDepartments": {
+      "LOKESH MURUGAN L": "Information Technology",
+      "MOHANA SHREE S": "Information Technology",
+      "MANTHRA S": "Information Technology",
+      "BHAVANI SHREE V": "Information Technology",
+      "DHAKSHAN B": "Information Technology",
+      "AKASH V": "Information Technology"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://github.com/lokeshmurugan-l/Team-smart-worker-hackathon-.git",
+    "videoUrl": "https://drive.google.com/file/d/1V6JelWP64CFxrQCpM76ZNX4OdfestYX2/view?usp=drivesdk"
+  },
+  {
+    "id": "stock-protocol",
+    "name": "Stock protocol",
+    "department": "Electronics and Communication Engineering",
+    "problemTitle": "AI-Based Fake Identity & Document Screening System",
+    "problemCode": "SIH26188",
+    "leader": "SREEKARTHIGA K S",
+    "members": [
+      "SREEKARTHIGA K S",
+      "THILAK ESWARAN S",
+      "SUDHARSHAN D",
+      "TARESH INFANT S",
+      "SHREYA E S",
+      "VINISH V"
+    ],
+    "memberDepartments": {
+      "SREEKARTHIGA K S": "Electronics and Communication Engineering",
+      "THILAK ESWARAN S": "Electronics and Communication Engineering",
+      "SUDHARSHAN D": "Electronics and Communication Engineering",
+      "TARESH INFANT S": "Electronics and Communication Engineering",
+      "SHREYA E S": "Electronics and Communication Engineering",
+      "VINISH V": "Electronics and Communication Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://docs.google.com/presentation/d/10pKvLjZWJRBEnk8QKzXwgDsXzzHMLt-U/edit?usp=drivesdk&ouid=106836410920085645517&rtpof=true&sd=true",
+    "videoUrl": "https://drive.google.com/file/d/10t3YHTgOQCrfg_dH6P-wz3z1IdqFp3Fj/view?usp=drivesdk"
+  },
+  {
+    "id": "vortech",
+    "name": "Vortech",
+    "department": "Computer Science and Engineering",
+    "problemTitle": "Student Innovation-A solution/idea that can boost the current situation of the tourism industries including hotels, travel and others.",
+    "problemCode": "SIH26204",
+    "leader": "R ABINAV",
+    "members": [
+      "R ABINAV",
+      "CHIKLETHAN K S",
+      "P.P BALAKARTHIC",
+      "ABINESH J",
+      "ASHWIN KUMAAR K S",
+      "DEVADHARSHINI P"
+    ],
+    "memberDepartments": {
+      "R ABINAV": "Computer Science and Engineering",
+      "CHIKLETHAN K S": "Computer Science and Engineering",
+      "P.P BALAKARTHIC": "Computer Science and Engineering",
+      "ABINESH J": "Computer Science and Engineering",
+      "ASHWIN KUMAAR K S": "Computer Science and Engineering",
+      "DEVADHARSHINI P": "Computer Science and Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://drive.google.com/file/d/1ZOXZ5gXgUNXKt9ZI4hwf919M9zcEnlZA/view?usp=drivesdk",
+    "videoUrl": "https://drive.google.com/file/d/1lasI0njOvC7VrXaD7wri6-tF59zmHqFx/view?usp=drivesdk"
+  },
+  {
+    "id": "nextgen-creators",
+    "name": "NEXTGEN CREATORS",
+    "department": "Electronics and Communication Engineering",
+    "problemTitle": "Early detection and management of crop diseases and pest infestations",
+    "problemCode": "SIH26131",
+    "leader": "JAI GANESH S",
+    "members": [
+      "JAI GANESH S",
+      "JAIKRISHNA K",
+      "DEEPANA P",
+      "JAYASRI L",
+      "GOKUL R",
+      "ELANCHEZHIYAN S"
+    ],
+    "memberDepartments": {
+      "JAI GANESH S": "Electronics and Communication Engineering",
+      "JAIKRISHNA K": "Electronics and Communication Engineering",
+      "DEEPANA P": "Electronics and Communication Engineering",
+      "JAYASRI L": "Electronics and Communication Engineering",
+      "GOKUL R": "Electronics and Communication Engineering",
+      "ELANCHEZHIYAN S": "Electronics and Communication Engineering"
+    },
+    "matchStrategy": "teamName",
+    "pptUrl": "https://ap.wps.com/cms/docs/d/cbCaeniFvq2Ly9SP?sa=601.1074&refer=copylink",
+    "videoUrl": "https://drive.google.com/file/d/1mcLPxxAN59H5h04Y1b3fioBeRNHNhAiP/view?usp=drivesdk"
+  }
 ]
