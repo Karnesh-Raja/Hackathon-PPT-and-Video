@@ -92,6 +92,8 @@
     .member-list { display:grid; grid-template-columns:1fr 1fr; gap:7px; margin:0; padding:0; list-style:none; }
     .member { min-width:0; display:flex; align-items:flex-start; gap:7px; padding:8px 9px; border:1px solid rgba(255,255,255,.055); border-radius:9px; color:#ded8c8; background:rgba(255,255,255,.025); font-size:10px; line-height:1.35; }
     .member .bullet { flex:0 0 auto; color:#a98a45; }
+    .member-info { display:flex; min-width:0; flex-direction:column; gap:3px; }
+    .member-dept { color:var(--soft); font-size:9px; line-height:1.35; }
     .member.is-leader { border-color:rgba(224,189,101,.25); color:#fff0c7; }
     .member .leader-mark { margin-left:auto; color:var(--gold); font-size:8px; font-weight:850; letter-spacing:.06em; }
     .resources { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
@@ -165,7 +167,7 @@
 
       <section class="unmatched-wrap" id="unmatchedWrap" hidden>
         <h2 class="unmatched-title">Submissions needing a team match</h2>
-        <p class="unmatched-intro" id="unmatchedIntro">These submissions could not be safely attached to a team using the leader name provided. Check the leader spelling or update the team directory.</p>
+        <p class="unmatched-intro" id="unmatchedIntro">These entries could not be safely matched to a registered team. Check the team label and registration details.</p>
         <div class="unmatched-list" id="unmatchedList"></div>
       </section>
     </section>
@@ -180,8 +182,8 @@
 
   <script>
     // Existing published Google Sheets CSV URL from the previous showcase website.
-    // Submission labels contain the team name followed by a dash and the leader name.
-    // Matching uses that leader suffix, including for the five Tech Titans teams.
+    // Submission labels contain the team name followed by a dash and sometimes a leader name.
+    // Match by team name first; use the leader suffix only to disambiguate duplicate names (Tech Titans).
     const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRpV1lTjxxg_WVpjZsJpnCPaP0b66Y3OBexrmDlzNpI5T0vdWOBy-phoH_4pHeGvYsIUjisG0YLSw0s/pub?gid=778663479&single=true&output=csv";
     const REFRESH_EVERY_MS = 60000;
 
@@ -290,57 +292,50 @@
         team.video = safeLink(team.videoUrl);
       });
 
-      // Match using the leader suffix to the right of the dash. This is the
-      // reliable key for teams whose visible names are repeated (Tech Titans)
-      // and also works for uniquely named teams in the submission workbook.
-      const teamsByLeader = new Map();
-      teams.forEach(team => {
-        const key = normalise(team.leader);
-        if (!key) return;
-        if (!teamsByLeader.has(key)) teamsByLeader.set(key, []);
-        teamsByLeader.get(key).push(team);
-      });
-      const rowsByLeader = new Map();
+      const rowsByTeam = new Map();
       submissions.forEach(row => {
-        const leader = splitSubmissionLabel(row.name).leader;
-        const key = normalise(leader);
-        if (!key) return;
-        if (!rowsByLeader.has(key)) rowsByLeader.set(key, []);
-        rowsByLeader.get(key).push(row);
+        const parts = splitSubmissionLabel(row.name);
+        let candidates = [];
+
+        // Team-name matching is restricted to the registrations explicitly
+        // supplied as HTML files. All other registrations keep leader matching.
+        const uploadedRegistrationMatches = teams.filter(team =>
+          team.matchStrategy === "teamName" &&
+          normalise(team.name) === normalise(parts.teamName)
+        );
+        if (uploadedRegistrationMatches.length) {
+          candidates = uploadedRegistrationMatches;
+        } else if (parts.leader) {
+          candidates = teams.filter(team =>
+            team.matchStrategy !== "teamName" &&
+            normalise(team.leader) === normalise(parts.leader)
+          );
+        }
+
+        if (candidates.length > 1 && parts.leader) {
+          candidates = candidates.filter(team => normalise(team.leader) === normalise(parts.leader));
+        }
+        if (candidates.length > 1 && row.problem) {
+          candidates = candidates.filter(team => {
+            const code = normalise(team.problemCode || "");
+            return code && normalise(row.problem).includes(code);
+          });
+        }
+        if (candidates.length !== 1) return;
+
+        const team = candidates[0];
+        if (!rowsByTeam.has(team.id)) rowsByTeam.set(team.id, []);
+        rowsByTeam.get(team.id).push(row);
       });
 
-      for (const [key, teamGroup] of teamsByLeader.entries()) {
-        const rows = rowsByLeader.get(key) || [];
-        // Only auto-assign when the leader identifies exactly one registered team.
-        if (teamGroup.length !== 1 || !rows.length) continue;
-        const team = teamGroup[0];
-        // The sheet is chronological: use the latest row when a leader submits
-        // an updated PPT/video. Mark earlier rows as superseded, not unmatched.
+      // Use the latest row for each team; repeated earlier rows are superseded.
+      for (const [teamId, rows] of rowsByTeam.entries()) {
+        const team = teams.find(item => item.id === teamId);
         const latest = rows[rows.length - 1];
         team.ppt = team.ppt || latest.ppt;
         team.video = team.video || latest.video;
         rows.forEach(row => used.add(row.rowId));
       }
-
-      // If a future row contains only a team name (no leader suffix), match it
-      // only when that name is unique. A bare "Tech Titans" remains ambiguous.
-      submissions.filter(row => !used.has(row.rowId)).forEach(row => {
-        const parts = splitSubmissionLabel(row.name);
-        if (parts.leader) return;
-        let matches = teams.filter(team => normalise(team.name) === normalise(parts.teamName));
-        if (matches.length > 1 && row.problem) {
-          matches = matches.filter(team => {
-            const code = normalise(team.problemCode || "");
-            return code && normalise(row.problem).includes(code);
-          });
-        }
-        if (matches.length === 1) {
-          const team = matches[0];
-          team.ppt = team.ppt || row.ppt;
-          team.video = team.video || row.video;
-          used.add(row.rowId);
-        }
-      });
 
       return submissions.filter(row => !used.has(row.rowId));
     }
@@ -356,7 +351,8 @@
       const problem = team.problemTitle ? `<span class="team-problem">${escapeHTML(team.problemTitle)}${team.problemCode ? ` · ${escapeHTML(team.problemCode)}` : ""}</span>` : "";
       const members = (team.members || []).map(member => {
         const leader = normalise(member) === normalise(team.leader);
-        return `<li class="member ${leader ? "is-leader" : ""}"><span class="bullet">◆</span><span>${escapeHTML(member)}</span>${leader ? `<span class="leader-mark">LEADER</span>` : ""}</li>`;
+        const memberDepartment = team.memberDepartments?.[member] || "";
+        return `<li class="member ${leader ? "is-leader" : ""}"><span class="bullet">◆</span><span class="member-info"><span>${escapeHTML(member)}</span>${memberDepartment ? `<span class="member-dept">${escapeHTML(memberDepartment)}</span>` : ""}</span>${leader ? `<span class="leader-mark">LEADER</span>` : ""}</li>`;
       }).join("");
       const note = (!team.ppt && !team.video)
         ? (isTechTitan
@@ -421,6 +417,12 @@
       const response = await fetch("./teams.json", { cache: "no-store" });
       if (!response.ok) throw new Error(`Could not load teams.json (${response.status}). Upload both index.html and teams.json to the repository root.`);
       teams = await response.json();
+      // Show any direct/snapshotted links immediately, even before the live
+      // spreadsheet refresh completes or when that feed is temporarily offline.
+      teams.forEach(team => {
+        team.ppt = safeLink(team.pptUrl);
+        team.video = safeLink(team.videoUrl);
+      });
       populateDepartments();
       render();
     }
